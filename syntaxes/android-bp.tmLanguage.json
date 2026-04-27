@@ -1,0 +1,63 @@
+{
+  "name": "Android Blueprint",
+  "scopeName": "source.android-bp",
+  "fileTypes": ["Android.bp"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#node" },
+    { "include": "#property" },
+    { "include": "#string" },
+    { "include": "#boolean" },
+    { "include": "#number" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.android-bp",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.android-bp",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "node": {
+      "patterns": [
+        {
+          "name": "entity.name.type.android-bp",
+          "match": "^\\s*([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\{)"
+        }
+      ]
+    },
+    "property": {
+      "patterns": [
+        {
+          "name": "support.type.property-name.android-bp",
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=:)"
+        }
+      ]
+    },
+    "string": {
+      "name": "string.quoted.double.android-bp",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.android-bp",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "boolean": {
+      "name": "constant.language.boolean.android-bp",
+      "match": "\\b(true|false)\\b"
+    },
+    "number": {
+      "name": "constant.numeric.android-bp",
+      "match": "\\b[0-9]+\\b"
+    }
+  }
+}

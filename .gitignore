@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Build output (compiled JS)
+out/
+
+# VS Code extension packages
+*.vsix
+
+# Editor settings
+.vscode/
+!.vscode/extensions.json
+
+# TypeScript cache
+*.tsbuildinfo

@@ -1,0 +1,70 @@
+{
+  "name": "android-bp-autocomplete",
+  "displayName": "Android.bp Autocomplete",
+  "description": "Autocomplete, hover documentation, and property scaffolding for Android.bp (Soong build) files.",
+  "version": "1.1.1",
+  "publisher": "AbdelfattahA",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "keywords": [
+    "android",
+    "soong",
+    "blueprint",
+    "android.bp",
+    "autocomplete",
+    "aosp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AhmedAbd-ElFattah/Android-bp-autocomplete"
+  },
+  "license": "MIT",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "android-bp",
+        "aliases": [
+          "Android Blueprint",
+          "android-bp"
+        ],
+        "filenames": [
+          "Android.bp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "android-bp",
+        "scopeName": "source.android-bp",
+        "path": "./syntaxes/android-bp.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "android-bp.pickKeys",
+        "title": "Android.bp: Pick module properties"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/vscode": "^1.75.0",
+    "@vscode/vsce": "^2.19.0",
+    "typescript": "^5.0.0"
+  }
+}
