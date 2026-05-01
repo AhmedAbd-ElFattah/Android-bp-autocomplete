@@ -1,9 +1,29 @@
+- [Android.bp Autocomplete](#androidbp-autocomplete)
+  - [Features](#features)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+    - [From VSCode Marketplace](#from-vscode-marketplace)
+    - [From source](#from-source)
+  - [Regenerating soong\_schema.json from AOSP](#regenerating-soong_schemajson-from-aosp)
+    - [Prerequisites](#prerequisites)
+      - [1. System requirements](#1-system-requirements)
+      - [2. Download the AOSP source tree](#2-download-the-aosp-source-tree)
+      - [3. Build the Soong documentation](#3-build-the-soong-documentation)
+    - [Running the schema generator](#running-the-schema-generator)
+      - [Options](#options)
+      - [Examples](#examples)
+  - [How it works](#how-it-works)
+  - [Known limitations](#known-limitations)
+  - [Contributing](#contributing)
+  - [License](#license)
+
 # Android.bp Autocomplete
 
 A VS Code extension that brings full autocomplete, hover documentation, and property scaffolding to `Android.bp` (Soong build system) files.
 
 If you have spent any time writing Android.bp files without tooling, you know how painful it is to look up property names and types by hand. This extension fixes that. It reads a pre-extracted `soong_schema.json` file at runtime and uses it to power everything below — no network calls, no build system required during normal use.
 
+![Android.bp Autocomplete demo](docs/extenstion-demo.gif)
 
 ## Features
 
@@ -27,7 +47,8 @@ If you have spent any time writing Android.bp files without tooling, you know ho
 
 ## Installation
 
-
+### From VSCode Marketplace
+Can be installed from [here]([URL](https://marketplace.visualstudio.com/items?itemName=AbdelfattahA.android-bp-autocomplete))
 ### From source
 
 ```bash
